@@ -1,21 +1,49 @@
 package business;
 
-import java.io.Serializable;
+import java.util.List;
 
-public class Book extends Publication implements Serializable {
-	private int id;
+public class Book {
+	
+	private String title;
 	private String isbn;
-	private boolean available;
-	public Book(int id, String isbn, String title) {
-		super(title);
-		this.id = id;
+	private List<Author> authors;
+	private int maxDuration;
+	private int maxCheckoutLength;
+	
+	
+	public Book(String title, String isbn, List<Author> authors, int maxDuration, int maxCheckoutLength) {
+		super();
+		this.title = title;
 		this.isbn = isbn;
+		this.authors = authors;
+		this.maxDuration = maxDuration;
+		this.maxCheckoutLength = maxCheckoutLength;
 	}
-	public void isAvailable(boolean b) {
-		available = b;
+
+
+	public String getTitle() {
+		return title;
 	}
-	@Override
-	public String toString() {
-		return "id: " + id + ", isbn: " + isbn + ", available: " + available;
+
+
+	public String getIsbn() {
+		return isbn;
 	}
+
+
+	public List<Author> getAuthors() {
+		return authors;
+	}
+
+
+	public int getMaxDuration() {
+		return maxDuration;
+	}
+
+
+	public int getMaxCheckoutLength() {
+		return maxCheckoutLength;
+	}
+	
+
 }

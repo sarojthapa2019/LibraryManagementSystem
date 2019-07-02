@@ -1,19 +1,10 @@
 package business;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDate;
 
-public class CheckoutRecord implements Serializable {
+public class CheckoutRecord {
 	
-	private static final long serialVersionUID = -3119855589946373695L;
-	private LibraryMember member;
-	private List<CheckoutRecordEntry> entries = new ArrayList<>();
-	public void addEntry(CheckoutRecordEntry c) {
-		entries.add(c);
-	}
-	
-	public String toString() {
-		return entries.toString();
-	}
+	private int recordId;
+	private Member member;
+
 }
